@@ -260,3 +260,4 @@ ggplot(Hockey_Ticket_Sales, aes(x = fct_reorder(school,`Ticket Sales`), y = `Tic
 
 #Always run in terminal to push update: git push origin main
 
+
