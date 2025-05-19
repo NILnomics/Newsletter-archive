@@ -258,7 +258,5 @@ ggplot(Hockey_Ticket_Sales, aes(x = fct_reorder(school,`Ticket Sales`), y = `Tic
         legend.position = "none")
 
 
-#system("git push origin main")
+#Always run in terminal to push update: git push origin main
 
-gitcreds::gitcreds_set()
-#Final Test - test
