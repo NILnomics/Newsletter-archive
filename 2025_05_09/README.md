@@ -10,4 +10,4 @@ This issue explores the financial landscape of Power Five athletic departments, 
 - Hockey win % vs. revenue visualization
 - R script for cleaning/visualizations
 
-📬 [Read the full issue on Beehiiv](https://your-newsletter-link.beehiiv.com/p/2025-05-09)
+📬 [Read the full issue on Beehiiv](https://www.newsletter.nilnomics.com/p/house-of-cards-2f4b)

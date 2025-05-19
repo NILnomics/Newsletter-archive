@@ -254,3 +254,8 @@ ggplot(Hockey_Ticket_Sales, aes(x = fct_reorder(school,`Ticket Sales`), y = `Tic
         panel.background = element_blank(),
         plot.title=element_text(size=14, face="bold"),
         legend.position = "none")
+
+
+#system("git push origin main")
+
+

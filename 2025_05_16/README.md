@@ -1,13 +1,13 @@
-# NILnomics — May 9, 2025
+# NILnomics — May 16, 2025
 
-Welcome to the first issue of the NILnomics archive.
+Welcome to the second issue of the NILnomics archive.
 
-This issue explores the financial landscape of Power Five athletic departments, NCAA revenue breakdowns, and includes a data-driven dive into the new roster limits.
+This issue further explores the potential impacts of the House Settlement roster limits, reviews the new salary cap, and reviews ice hockey ticket sales
 
 **Downloads:**
 - Roster limit visualizations - sport, sex, institution
-- Top 10 revenue visualization
-- Hockey win % vs. revenue visualization
+- Pool revenue vs $20.5 million cap across FBS
+- Hockey ticket sales
 - R script for cleaning/visualizations
 
-📬 [Read the full issue on Beehiiv](https://your-newsletter-link.beehiiv.com/p/2025-05-09)
+📬 [Read the full issue on Beehiiv](https://www.newsletter.nilnomics.com/p/we-re-back-for-more)
