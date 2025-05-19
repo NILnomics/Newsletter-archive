@@ -21,6 +21,8 @@ library(readr)
 library(httr)
 library(jsonlite)
 library(openxlsx)
+install.packages("gitcreds")
+library("gitcreds")#Need to push to GitHub
 
 
 # Specify the dataset slug (replace with your own dataset slug)
@@ -229,7 +231,7 @@ scale_fill_identity()+
         legend.position = "none")
 
 
-#Ice Hockey Ticket Sales Analysis
+#Ice Hockey Ticket Sales Analysis - DI
 Hockey_Ticket_Sales <- NCAA_Financial_Reports_Data%>%
   filter(`Fiscal Year` == 2023 & Sport == 'Ice Hockey' & Item == 'Ticket Sales')%>%
   left_join(School_Logos, by=c('unitid' = 'unitid'))%>%
@@ -258,4 +260,4 @@ ggplot(Hockey_Ticket_Sales, aes(x = fct_reorder(school,`Ticket Sales`), y = `Tic
 
 #system("git push origin main")
 
-
+gitcreds::gitcreds_set()
