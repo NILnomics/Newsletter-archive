@@ -1,6 +1,6 @@
 # NILnomics — May 16, 2025
 
-Welcome to the second issue of the NILnomics archive.
+Welcome to issue two of NILnomics.
 
 This issue further explores the potential impacts of the House Settlement roster limits, reviews the new salary cap, and reviews ice hockey ticket sales
 
