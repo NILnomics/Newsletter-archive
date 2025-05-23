@@ -33,7 +33,7 @@ NILnomics_ncaa_eada_data <- "nilnomics/ncaa-eada-data"
 NILnomics_2024_25_ncaa_mens_hockey_results <- "nilnomics/2024-25-ncaa-mens-hockey-results"
 NILnomics_house_settlement_roster_limits <- "nilnomics/house-settlement-roster-limits"
 NILnomics_institution_name_iped_id_conference_bridge_file <- "nilnomics/institution-name-iped-id-conference-bridge-file"
-NILnomics_Institutional_Revenues  <- "nilnomics/Institutional_Revenues"
+NILnomics_Institutional_Revenues  <- "nilnomics/knight-newhouse-data"
 
 # Run the Kaggle CLI command to download the dataset
 system(paste("kaggle datasets download -d", NILnomics_Athletic_Participation_Data, "--force"), intern = TRUE)
@@ -73,9 +73,9 @@ system(paste("kaggle datasets download -d", NILnomics_institution_name_iped_id_c
 unzip("institution-name-iped-id-conference-bridge-file.zip")
 Institution_Name_UnitIDs <- read_excel("Institution Name UnitIDs.xlsx")
 
-# Run the Kaggle CLI command to download the dataset
+#Use Kaggle CLI commands to download individual dataset
 system(paste("kaggle datasets download -d", NILnomics_Institutional_Revenues, "--force"), intern = TRUE)
-unzip("Institutional_Revenues.zip")
+unzip("knight-newhouse-data.zip")
 Institutional_Revenues <- read_excel("Institutional_Revenues.xlsx")
 
 
