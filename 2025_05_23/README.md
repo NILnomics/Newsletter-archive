@@ -9,4 +9,4 @@ This issue further explores the potential impacts of the House Settlement roster
 - Hockey ticket sales
 - R script for cleaning/visualizations
 
-📬 [Read the full issue on Beehiiv](https://www.newsletter.nilnomics.com/p/we-re-back-for-more)
+📬 [Read the full issue on Beehiiv](https://www.newsletter.nilnomics.com/p/did-i-just-figure-out-why-the-ivy-league-conference-is-really-not-opting-into-the-house-settlement-1)
