@@ -223,14 +223,14 @@ Princeton_URLs <- tibble(
           "https://yalebulldogs.com/sports/baseball/roster/2023?view=2","https://yalebulldogs.com/sports/mens-basketball/roster/2022-23?view=2","https://yalebulldogs.com/sports/mens-cross-country/roster/2022?view=2","https://yalebulldogs.com/sports/mens-fencing/roster/2022-23?view=2","https://yalebulldogs.com/sports/football/roster/2022-23?view=2","https://yalebulldogs.com/sports/mens-golf/roster/2022-23?view=2","https://yalebulldogs.com/sports/mens-ice-hockey/roster/2022-23?view=2","https://yalebulldogs.com/sports/mens-lacrosse/roster/2023?view=2","https://yalebulldogs.com/sports/mens-soccer/roster/2022?view=2","https://yalebulldogs.com/sports/mens-swimming-and-diving/roster/2022-23?view=2","https://yalebulldogs.com/sports/mens-tennis/roster/2022-23?view=2","https://yalebulldogs.com/sports/mens-track-and-field/roster/2022-23?view=2",
           "https://dartmouthsports.com/sports/womens-basketball/roster/2022-23","https://dartmouthsports.com/sports/womens-cross-country/roster/2022","https://dartmouthsports.com/sports/equestrian/roster/2022-23","https://dartmouthsports.com/sports/field-hockey/roster/2022","https://dartmouthsports.com/sports/womens-golf/roster/2022-23","https://dartmouthsports.com/sports/womens-ice-hockey/roster/2022-23","https://dartmouthsports.com/sports/womens-lacrosse/roster/2023","https://dartmouthsports.com/sports/womens-rowing/roster/2022-23","https://dartmouthsports.com/sports/alpine-skiing/roster/2022-23","https://dartmouthsports.com/sports/womens-soccer/roster/2022","https://dartmouthsports.com/sports/softball/roster/2023","https://dartmouthsports.com/sports/womens-swimming-and-diving/roster/2022-23","https://dartmouthsports.com/sports/womens-tennis/roster/2022-23","https://dartmouthsports.com/sports/womens-track-and-field/roster/2022-23","https://dartmouthsports.com/sports/womens-volleyball/roster/2023",
           "https://dartmouthsports.com/sports/baseball/roster/2023","https://dartmouthsports.com/sports/mens-basketball/roster/2022-23","https://dartmouthsports.com/sports/mens-cross-country/roster/2022","https://dartmouthsports.com/sports/football/roster/2022","https://dartmouthsports.com/sports/mens-golf/roster/2022-23","https://dartmouthsports.com/sports/mens-lacrosse/roster/2023","https://dartmouthsports.com/sports/alpine-skiing/roster/2022-23","https://dartmouthsports.com/sports/mens-soccer/roster/2022","https://dartmouthsports.com/sports/mens-swimming-and-diving/roster/2022-23","https://dartmouthsports.com/sports/mens-tennis/roster/2022-23","https://dartmouthsports.com/sports/mens-track-and-field/roster/2022-23"
-          ),
+  ),
   sport = c("Basketball", "Cross Country", "Fencing", "Field Hockey", "Golf", "Ice Hockey", "Lacrosse", "Rowing", "Soccer", "Softball", "Swimming & Diving", "Tennis", "Track & Field", "Volleyball", "Water Polo",
             "Baseball", "Basketball", "Cross Country", "Fencing", "Football", "Golf", "Ice Hockey", "Lacrosse", "Soccer", "Swimming & Diving", "Tennis", "Track & Field", "Volleyball", "Water Polo", "Wrestling",
             "Basketball", "Cross Country", "Fencing", "Field Hockey", "Golf", "Gymnastics", "Ice Hockey", "Lacrosse", "Rowing", "Soccer", "Softball", "Swimming & Diving", "Tennis", "Track & Field", "Volleyball",
             "Baseball", "Basketball", "Cross Country", "Fencing", "Football", "Golf", "Ice Hockey", "Lacrosse", "Soccer", "Swimming & Diving", "Tennis", "Track & Field",
             "Basketball", "Cross Country", "Equestrian", "Field Hockey", "Golf", "Ice Hockey", "Lacrosse", "Rowing", "Skiing", "Soccer", "Softball", "Swimming & Diving", "Tennis", "Track & Field", "Volleyball",
             "Baseball", "Basketball", "Cross Country", "Football", "Golf", "Lacrosse", "Skiing", "Soccer", "Swimming & Diving", "Tennis", "Track & Field"
-            ),
+  ),
   sex = c("Women","Women", "Women", "Women", "Women", "Women", "Women", "Women", "Women", "Women", "Women", "Women", "Women", "Women", "Women",
           "Men","Men", "Men", "Men", "Men", "Men", "Men", "Men", "Men", "Men", "Men", "Men", "Men", "Men", "Men",
           "Women","Women","Women","Women","Women","Women","Women","Women","Women","Women","Women","Women","Women","Women","Women",
@@ -244,7 +244,7 @@ Princeton_URLs <- tibble(
              "Yale University", "Yale University", "Yale University", "Yale University", "Yale University", "Yale University", "Yale University", "Yale University", "Yale University", "Yale University", "Yale University", "Yale University",
              "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", 
              "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College", "Dartmouth College"
-             )
+  )
 )
 
 #Count number of rosters
@@ -341,7 +341,7 @@ Roster_Calc_Princeton <- Final_Roster%>%
   mutate(`Lost Roster Spots` = case_when(`New limit` < n ~ n - `New limit`,
                                          T ~ 0),
          `New Roster Spots` = case_when(`New limit` > n ~ `New limit` - n,
-                                      T ~ 0))
+                                        T ~ 0))
 
 Total_Roster_Changes <- Roster_Calc_Princeton%>%
   group_by(school)%>%
@@ -385,12 +385,49 @@ ggplot(Roster_Calc, aes(x = school, y = n, fill = school)) +
   scale_fill_manual(
     name = "Institutions",
     values = c(
-    "Cornell University" = "#B31B1B",
-    "Harvard University" = "#A51C30",
-    "Yale University" = "#00356B",
-    "Princeton University" = "#F58025",
-    "Dartmouth College" = "#00693E"
-  )) 
+      "Cornell University" = "#B31B1B",
+      "Harvard University" = "#A51C30",
+      "Yale University" = "#00356B",
+      "Princeton University" = "#F58025",
+      "Dartmouth College" = "#00693E"
+    )) 
+
+
+
+
+
+
+
+#Hockey ticket sales vs FBS football####
+Hockey_Football_Ticket_Sales <- NCAA_Financial_Reports_Data%>%
+  filter(`Fiscal Year` == 2023 & Item == 'Ticket Sales' & Sport %in% c('Football','Ice Hockey') & Men > 2838181)%>%
+  filter(!is.na(unitid))%>%#####UPDATE LATER
+  left_join(School_Logos,by=c("unitid" = "unitid")) %>%
+  arrange(desc(Men))%>%
+  mutate(id = row_number()) %>%
+  mutate(id = fct_reorder(as.character(id), Men, .desc = TRUE))%>%
+  mutate(Men = Men/1000000)
+
+
+ggplot(Hockey_Football_Ticket_Sales, aes(x = id, y = Men, fill = Sport))+
+  geom_bar(stat="identity") + 
+  geom_text(aes(label = dollar(Men,accuracy=1)),vjust=2,size=2.5,color="white")+
+  scale_x_discrete(labels = Hockey_Football_Ticket_Sales$abbreviation) +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.line = element_line(colour = "black"),
+        plot.title = element_text(size = 16, face = "bold", hjust = 0.5, margin = margin(b = 20)),
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+  labs(y='Total Ticket Sales (Millions)', title = "Top 50 Institutions in Total Ticket Sales, Football/Ice Hockey") +
+  scale_fill_manual(values = c("#042a32","#189339"))+
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 66), labels = function(x) paste0("$", round(x)))
+
+
+
+#To commit changes to GitHub:####
+#Stage, commit, comment, push
+#Always run in terminal to push update: git push origin main
 
 
 
