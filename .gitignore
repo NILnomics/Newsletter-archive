@@ -4,3 +4,7 @@
 .Ruserdata
 ssh-keygen -t ed25519 -C "nilnomics@gmail.com"
 ssh-keygen -t ed25519 -C "nilnomics@gmail.com".pub
+*.pem
+*.key
+*.pub
+id_*
